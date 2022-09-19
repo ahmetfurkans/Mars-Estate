@@ -1,8 +1,6 @@
-# ahmet-furkan-sevim-week4
 ## About
-FMSS Bilişim Kotlin Bootcamp 4. Hafta Ödevi Mars Estate
-- 📫 How to reach me: ... [Linkedin Profile](https://www.linkedin.com/in/ahmetfurkansevim/)
-- 😄 Pronouns: ... He,Him
+- Mars Real Estate, connect to internet
+- How to reach End point: ... [Link](https://mars.udacity.com/realestate)
 
 ## Main Features
 - MVVM
