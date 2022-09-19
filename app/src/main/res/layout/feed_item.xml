@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="estate"
+            type="com.empedocles.marsestate.model.Estate" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_img"
+            android:layout_width="160dp"
+            android:layout_height="204dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.feed_item"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:text="@{`For ` + estate.estateType}"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/item_img"
+            app:layout_constraintTop_toTopOf="@id/item_img" />
+
+
+        <TextView
+            android:id="@+id/item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@{Integer.toString(estate.estatePrice) + '$'}"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/item_img"
+            app:layout_constraintTop_toBottomOf="@+id/item_img" />
+
+        <TextView
+            android:id="@+id/item_id"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginEnd="5dp"
+            android:text="@{estate.estateId}"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/item_img"
+            app:layout_constraintTop_toBottomOf="@+id/item_img" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

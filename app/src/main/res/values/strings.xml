@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">marsEstate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string">
+        <![CDATA[
+        <div>Let’s Explore the <br /><span style=\"color: #f9ad1a;\">Solar System</span> <br />with <span style=\"color: #f9ad1a\">Explorer</span></div>
+        ]]>
+</string>
+    <string name="mars_estate">MARS ESTATE</string>
+    <string name="let_s_go">Let\'s Go</string>
+    <string name="on_boarding_banner">on boarding banner</string>
+    <string name="let_s_explore_the_nsolar_system_nwith_explorer">Let’s Explore the \nSolar System \nwith Explorer</string>
+    <string name="buy_now_be_a_martian">BUY NOW, BE A MARTIAN</string>
+    <string name="product_image">product image</string>
+    <string name="buy_now">Buy Now</string>
+</resources>

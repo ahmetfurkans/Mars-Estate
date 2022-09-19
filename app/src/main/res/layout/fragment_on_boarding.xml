@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.FeedFragment">
+
+        <TextView
+            android:id="@+id/onBoarding_h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/lora"
+            android:text="@string/mars_estate"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/onBoarding_h2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="@string/let_s_explore_the_nsolar_system_nwith_explorer"
+            android:textColor="#000"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onBoarding_h1" />
+
+        <ImageView
+            android:contentDescription="@string/on_boarding_banner"
+            android:id="@+id/onBoarding_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/on_boarding_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/onBoarding_h2" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/onBoarding_button"
+            android:layout_width="345dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/onboarding_button"
+            android:drawableEnd="@drawable/ic_rocket"
+            android:fontFamily="@font/open_sans_bold"
+            android:paddingStart="100dp"
+            android:paddingEnd="100dp"
+            android:text="@string/let_s_go"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="estate"
+            type="com.empedocles.marsestate.model.Estate" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.ProductFragment">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/product_img"
+            android:layout_width="match_parent"
+            android:layout_height="348dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.product_img"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/product_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="14dp"
+            android:text="@{`For ` + estate.estateType}"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/product_img"
+            app:layout_constraintTop_toTopOf="@id/product_img"
+            />
+
+        <ImageView
+            android:contentDescription="@string/product_image"
+            android:id="@+id/backIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/materialDivider"
+            android:layout_width="330dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="32dp"
+            app:dividerColor="#141414"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_img" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="79dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/buy_now_be_a_martian"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
+
+        <TextView
+            android:id="@+id/product_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@{estate.estateId}"
+            android:textSize="23sp"
+            app:layout_constraintStart_toStartOf="@+id/materialDivider"
+            app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@{Integer.toString(estate.estatePrice) + '$'}"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/materialDivider"
+            app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="128dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="31dp"
+            android:background="@drawable/product_button_bg"
+            android:drawableStart="@drawable/ic_supermarket"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/buy_now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
